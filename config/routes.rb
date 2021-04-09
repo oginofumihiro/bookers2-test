@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users,only: [:show,:index,:edit,:update]
   root 'homes#top'
+  resources :relationships, only: [:create, :destroy, :index, :show]
 
 end
