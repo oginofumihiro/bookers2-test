@@ -13,10 +13,8 @@
     <th><%= link_to user.followings.count, relationships_path %></th>
   </tr>
   <tr>
-    <a href = <%= relationship_path(user) %> >
     <th>followers</th>
-    <th><%= user.followers.count %></th>
-    </a>
+    <th><%= link_to user.followers.count, relationship_path(user) %></th>
   </tr>
   　<th>
   　  <% if current_user.following?(user) %>

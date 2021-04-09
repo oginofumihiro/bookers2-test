@@ -1,5 +1,5 @@
 class RelationshipsController < ApplicationController
-before_action :set_user
+before_action :set_user, only: %i[create destroy]
 
   def create
     relationship = Relationship.new
